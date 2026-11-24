@@ -158,3 +158,15 @@ figure:has(> img.living-photo) figcaption, .quarto-figure figcaption { font-size
 @media (min-width: 992px) {
   .navbar-nav.me-auto > .nav-item:nth-child(n+3) { margin-left: 1rem; }
 }
+
+// Navbar on laptop-size screens (1200-1399 px): tighter spacing so everything fits on one line.
+// Below 1200 px the menu collapses into the ☰ button (collapse-below: xl in _quarto.yml).
+.navbar .nav-link { white-space: nowrap; }
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  .navbar .navbar-logo { height: 48px; max-height: 48px !important; }
+  .navbar-nav.me-auto > .nav-item:first-child > .nav-link {
+    font-size: 1rem; padding-left: .7rem; margin-right: .75rem;
+  }
+  .navbar-nav.me-auto > .nav-item:nth-child(n+3) { margin-left: .25rem; }
+  .navbar-nav .nav-link { padding-left: .5rem; padding-right: .5rem; }
+}
