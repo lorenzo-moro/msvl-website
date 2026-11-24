@@ -74,7 +74,7 @@ Photos go in the images folder, square, about 600 x 600 pixels.
 ![](images/isaac-burke.jpg){fig-alt="Isaac Burke"}
 
 [Isaac Burke]{.name}<br>
-[Simulation of ice-induced hull vibrations]{.role}
+[Hull vibrations from ship–ice interaction and propeller ice milling]{.role}
 :::
 
 ::: {.g-col-6 .g-col-md-3 .person}
