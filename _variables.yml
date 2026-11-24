@@ -1,0 +1,4 @@
+# Values reused across pages. Write {{< var lab_name >}} in a page to insert them.
+lab_name: "Marine Sound and Vibration Lab"
+pi_name: "Dr. Lorenzo Moro"
+email: "lmoro@mun.ca"

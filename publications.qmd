@@ -1,0 +1,25 @@
+---
+title: "Publications"
+---
+
+Selected publications from the lab, newest first. Authors marked with \* are students or postdoctoral fellows supervised in the lab. The complete list is on [Google Scholar](https://scholar.google.ca/citations?user=jRnCghYAAAAJ).
+
+<!--
+These lists are built automatically from Articles.bib (the full bibliography of
+the Overleaf CV) by clean_bib.py, which runs before every render.
+To update: copy the latest Articles.bib from Overleaf into this folder and render.
+To show more or fewer years of chapters and conference papers, change
+CHAPTERS_FROM and CONFERENCES_FROM at the top of clean_bib.py.
+-->
+
+## Journal articles
+
+{{< include _pubs_journal.md >}}
+
+## Book chapters and committee reports
+
+{{< include _pubs_chapters.md >}}
+
+## Recent conference papers
+
+{{< include _pubs_conferences.md >}}

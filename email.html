@@ -1,0 +1,13 @@
+<!-- Builds email links when a person views the page, so simple spam bots can't read the address. -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.obf-email').forEach(function (el) {
+    var addr = el.dataset.u + '@' + el.dataset.d;
+    var a = document.createElement('a');
+    a.href = 'mailto:' + addr + (el.dataset.s ? '?subject=' + encodeURIComponent(el.dataset.s) : '');
+    a.textContent = addr;
+    a.style.fontWeight = '600';
+    el.replaceWith(a);
+  });
+});
+</script>

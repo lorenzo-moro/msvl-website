@@ -1,0 +1,57 @@
+# ------------------------------------------------------------------
+# Site settings. The lab name appears in TWO places:
+#   1. "title" below (the name in the top bar)
+#   2. _variables.yml (the name used inside the pages)
+# ------------------------------------------------------------------
+project:
+  type: website
+  output-dir: _site
+  pre-render: clean_bib.py
+  resources:
+    - CNAME
+    - images/hero.jpg
+    - images/research-banner.jpg
+    - images/facilities-banner-buoy-level.jpg
+    - images/join-banner-campus.jpg
+    - images/team-v2.jpg
+
+website:
+  title: "Marine Sound and Vibration Lab"
+  site-url: "https://msvlab.ca"
+  description: "Ship acoustics, underwater radiated noise and ship structural dynamics at Memorial University of Newfoundland."
+  favicon: images/favicon-msvl.png
+  navbar:
+    title: false
+    logo: images/MUN_Logo_Pantone_white_text.png
+    logo-href: https://www.mun.ca
+    left:
+      - href: index.qmd
+        text: "Marine Sound and Vibration Lab"
+      - href: research.qmd
+        text: Research
+      - href: people.qmd
+        text: People
+      - href: publications.qmd
+        text: Publications
+      - href: facilities.qmd
+        text: Facilities & Tools
+      - href: join.qmd
+        text: Join Us
+  page-footer:
+    left: |
+      Department of Ocean and Naval Architectural Engineering<br>
+      Faculty of Engineering and Applied Science<br>
+      Memorial University of Newfoundland
+    right: |
+      S.J. Carew Building, 240 Prince Philip Drive<br>
+      St. John's, NL&nbsp; A1B 3X5, Canada<br>
+      [Contact](join.qmd#how-to-apply)
+
+format:
+  html:
+    theme:
+      light: [cosmo, styles.scss]
+    toc: false
+    page-layout: article
+    smooth-scroll: true
+    include-after-body: email.html

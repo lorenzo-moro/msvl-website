@@ -1,0 +1,9 @@
+/.quarto/
+/_site/
+.DS_Store
+
+**/*.quarto_ipynb
+
+# Backups and Python cache (not part of the website)
+_backup_*/
+__pycache__/

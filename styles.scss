@@ -1,0 +1,160 @@
+/*-- scss:defaults --*/
+// Colours: change these two lines to restyle the whole site.
+$primary: #0f2a47;      // deep navy (top bar, links, headings)
+$secondary: #2f6f8f;    // sea blue (accents)
+$body-color: #222;
+$link-color: $secondary;
+$font-family-sans-serif: "Source Sans 3", "Helvetica Neue", Arial, sans-serif;
+$headings-font-weight: 600;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+h1, h2, h3 { color: $primary; }
+
+// Big banner on the home page
+.hero {
+  background: linear-gradient(135deg, $primary 0%, $secondary 100%);
+  color: #fff;
+  padding: 3rem 2rem;
+  border-radius: 6px;
+  margin-bottom: 2rem;
+  h1 { color: #fff; margin-top: 0; font-size: 2.2rem; }
+  p  { font-size: 1.15rem; max-width: 46rem; margin-bottom: 0; }
+}
+
+// Research themes: picture on one side, text on the other
+.theme {
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 1.5rem;
+  align-items: start;
+  margin: 2.5rem 0;
+  img { width: 100%; border-radius: 6px; }
+  h2 { margin-top: 0; border-bottom: none; }
+}
+@media (max-width: 768px) { .theme { grid-template-columns: 1fr; } }
+
+// People cards
+.person {
+  text-align: center;
+  img { width: 140px; height: 140px; object-fit: cover; border-radius: 50%; margin-bottom: .5rem; }
+  .name { font-weight: 600; color: $primary; }
+  .role { font-size: .9rem; color: #555; }
+}
+
+.photo-row { margin-bottom: 2rem; }
+.photo-row img { width: 100%; border-radius: 6px; }
+.highlights li { margin-bottom: .4rem; }
+.callout-box { border-left: 4px solid $secondary; background: #f3f7fa; padding: 1rem 1.25rem; margin: 1.5rem 0; }
+
+.navbar .navbar-logo {
+  max-height: 60px !important;
+  height: 60px;
+}
+
+/* Lab name next to the MUN logo: lighter, with a thin divider */
+/* First menu item = lab name, styled as a title next to the MUN logo */
+.navbar-nav.me-auto > .nav-item:first-child > .nav-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  color: #ffffff !important;
+  padding-left: 0.9rem;
+  margin-left: 0.4rem;
+  margin-right: 1.5rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-bottom: none !important;
+}
+
+.mvl-hero {
+  margin: 2rem 0 2.5rem;
+}
+.mvl-eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.3em;
+  color: #2b6cb0;
+}
+.mvl-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  line-height: 1.1;
+  color: #0C2340;
+}
+.mvl-sub {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 0.6rem;
+}
+
+// Photo banner on the home page (the photo is set at the top of index.qmd)
+.hero-photo {
+  background-size: cover;
+  background-position: center 40%;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  padding: 3rem 2.5rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  font-size: 1.45rem;
+  line-height: 1.45;
+  p { max-width: 38rem; margin: 0; font-size: inherit; text-shadow: 0 1px 4px rgba(0,0,0,.45); }
+}
+
+// "Projects" lists under each research theme
+.projects { font-size: .9rem; color: #444; border-top: 1px solid #e3e8ee; margin-top: 1rem; padding-top: .75rem; }
+.projects p { margin-bottom: .3rem; color: $primary; }
+.projects ul { padding-left: 1.1rem; margin-bottom: 0; }
+.projects li { margin-bottom: .25rem; }
+
+// Featured project box on the Research page
+.featured { background: #f3f7fa; border-left: 4px solid $secondary; border-radius: 4px; padding: 1rem 1.25rem; margin: 1.25rem 0 .5rem; font-size: .95rem; }
+.featured p:first-child { color: $primary; }
+
+.featured figure { background: #fff; border-radius: 4px; padding: .5rem; margin: .75rem 0 1rem; }
+.featured figure img { width: 100%; height: auto; }
+.featured figcaption { font-size: .82rem; color: #555; margin-top: .4rem; }
+
+.theme figure { margin: 0; }
+.theme figcaption { font-size: .78rem; color: #666; margin-top: .35rem; line-height: 1.35; }
+
+// Team photo at the top of the People page
+.team-photo, img.team-photo { width: 100%; border-radius: 6px; margin-bottom: 1rem; }
+
+// Introductory paragraph: centred box, slightly larger, soft colour
+.intro { max-width: 760px; margin: 3.5rem auto 4.5rem; font-size: 1.2rem; line-height: 1.6; color: #3a4a5c; text-align: left; }
+
+// Photo in the Living in St. John's section (Join Us)
+.living-photo, img.living-photo { width: 100%; max-width: 100%; border-radius: 6px; }
+figure:has(> img.living-photo) figcaption, .quarto-figure figcaption { font-size: .78rem; color: #666; }
+
+// All page banners: same width (1100 px) and centred, so their left edge is the same on every page
+.hero-photo, .banner-credit {
+  width: min(1100px, calc(100vw - 2rem));
+  max-width: none;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+// Menu (Research, People, ...) starts in line with the left edge of the banners on wide screens.
+// 698px = half the banner width (550) + where the lab name starts (~139) + its right margin (24) - link padding (~15).
+@media (min-width: 992px) {
+  .navbar-nav.me-auto > .nav-item:first-child { min-width: calc(50vw - 698px); }
+}
+
+// Home page: keep the heading, banner, photos and text the same width as the banners (1100 px)
+.page-layout-full main.content { max-width: 1100px; margin-left: auto; margin-right: auto; }
+// More space between menu items (Research, People, ...). Applied from People onwards,
+// so Research stays aligned with the banner edge.
+@media (min-width: 992px) {
+  .navbar-nav.me-auto > .nav-item:nth-child(n+3) { margin-left: 1rem; }
+}
