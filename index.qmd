@@ -2,6 +2,7 @@
 title: ""
 pagetitle: "Home"
 page-layout: full
+description: "The Marine Sound and Vibration Lab at Memorial University of Newfoundland studies ship noise and vibration: underwater radiated noise, onboard noise exposure, ice-induced vibration and noise control by design."
 ---
 
 ```{=html}
